@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example SAS Code</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+.comment {
+	color: #008000;
+}
+.command {
+	color: #000080;
+}
+.length {
+	color: #008040;
+}
+.set {
+	color: #00F;
+}
+.variables {
+	color: #F00;
+}
+.codeindent {
+	text-indent: 4em;
+}
+</style>
+</head>
+
+<body>
+	<div id="mastercol">
+		<div id="betacol">
+			<div id="centercol">
+				<h1>
+					SAS Example Code
+				</h1>
+				
+				<div id="header">
+					
+					<?php include("menu.php"); ?>
+
+				</div>	
+				
+				
+				<div id="folio">
+<p><code><span class="comment">/*****************************************************************************************/<br>
+  /* This program takes a tab-delimited text file--exported from Millennium--that contains */<br> 
+  /*  ALL item records belonging to the MRC and creates the core dataset used for processing */<br>
+  /*******************************************************************************************/<br>
+  <br>
+  /*authored by Jerry Waller*/<br>
+  <br>
+  /*PART I*/<br>
+  /* lrecl must be larger than longest record or data may be lost or truncated */</span><br>
+  <br>
+  <strong><span class="command">data</span></strong> alpha;<br>
+  length 	callnum $ <span class="length">150</span><br />
+  <span class="codeindent">&nbsp;&nbsp;&nbsp;&nbsp;copy $ </span><span class="length">15</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;volume $ </span><span class="length">15</span><span class="codeindent"> <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;barcode $ </span><span class="length">11</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;intnote $ </span><span class="length">1000</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;message $ </span><span class="length">1000</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;pubnote $ </span><span class="length">1000</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;created $ </span><span class="length">25</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;status $ </span><span class="length">25</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;total $ </span><span class="length">25</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;ytd $ </span><span class="length">25</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;lastyr $ </span><span class="length">25</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;location $ </span><span class="length">25</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;biblocale $</span><span class="length"> 25</span><span class="codeindent"><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;title $ </span><span class="length">1000</span><span class="codeindent">;<br />
+    </span> <br />
+  <span class="command">infile</span> &quot;\\vmware-host\Shared Folders\input\25may2012.txt&quot; <br />
+  <span class="command">dlm</span>='09'x firstobs=2 missover dsd lrecl=1000; <br />
+  <span class="command">input</span> callnum $ copy $ volume $ barcode $ intnote $ message $ pubnote $ created $ status $ total $ ytd $ lastyr $ location $ biblocale $ title $;<br />
+  <span class="command"><strong>run</strong></span>;<br />
+  <br />
+  <span class="comment">/* prepare the call numbers for weeding */</span><br />
+  <span class="command"><strong>data</strong></span> <span class="set">beta</span>;<br />
+  <span class="set">set</span> alpha;<br />
+  <span class="command">callnum</span>=upcase(trim(compress(compress(callnum,'-'))));<br />
+  <span class="command"><strong>run</strong></span>;<br />
+  <br />
+  <span class="comment">/* process and format the dataset */</span><br />
+  <strong><span class="command">data</span></strong> charlie (<span class="command">drop</span>=created total ytd lastyr);<br />
+  <span class="command">retain</span> callnum volume copy barcode intnote message pubnote n_created status totalcirc yeartodate lastyearcirc location biblocale title;<br />
+  <span class="set">set</span> beta;<br />
+  <br />
+  <span class="comment">/* try to make the internal notes cooperate with tab-delimited output */</span><br />
+  <span class="command">intnote</span>=trim(compress(intnote,'<span class="variables">-[]{}!@#$%^&amp;*/\,.()=;:&quot;</span>'));<br />
+  <span class="command">intnote</span>=compress(intnote,&quot;<span class="variables">'</span>&quot;);<br />
+  <span class="command">intnote</span>=substr(intnote,1,120);<br />
+  <br />
+  <span class="comment">/* make the created date numeric and make it human readable */</span><br />
+  <span class="command">created</span>=compress(compress(created,&quot;-&quot;));<br />
+  <span class="command">n_created</span>=input(created,mmddyy8.);<br />
+  <span class="command">format</span> n_created date9.;<br />
+  <br />
+  <span class="comment">/* make the status human readable */</span><br />
+  <span class="command">status</span>=compress(status);<br />
+  <span class="command">if</span> <span class="command">status</span>='$' then status='lostpaid';<br />
+  <span class="command">else if</span> status='-' then status ='available';<br />
+  <span class="command">else if</span> status='m' then status ='missing';<br />
+  <span class="command">else if</span> status='n' then status ='billed';<br />
+  <span class="command">else if</span> status='o' then status ='noncirc';<br />
+  <span class="command">else if</span> status='r' then status ='repair';<br />
+  <span class="command">else if</span> status='t' then status ='in_transit';<br />
+  <span class="command">else if</span> status='w' then status ='withdrawn';<br />
+  <span class="command">else if</span> status='c' then status ='claims_lost';<br />
+  <span class="command">else if</span> status='d' then status ='declared_lost';<br />
+  <br />
+  <span class="comment">/* convert circulation counts to numeric */</span><br />
+  <span class="command">yeartodate</span>=input(ytd,best.);<br />
+  <span class="command">lastyearcirc</span>=input(lastyr,best.); <br />
+  <span class="command">totalcirc</span>=input(total,best.);<br />
+  <br />
+  <span class="comment">/*	something screws up the title field when the txt file is produced */<br />
+  /*	eliminating unneccesary characters appears to help */</span><br />
+  <span class="command">title</span>=trim(compress(title,'-[]{}!@#$%^&amp;*/\,.()=;:&quot;'));<br />
+  <span class="command">title</span>=compress(title,&quot;'&quot;);<br />
+  <span class="command">title</span>=substr(title,1,30);<br />
+  <br />
+  <strong><span class="command">run</span></strong>;<br />
+  </code>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

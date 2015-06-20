@@ -1,0 +1,169 @@
+/*******************************************************************************************************************************/
+/* This program takes a tab-delimited text file--exported from Millennium--that contains ALL item records belonging to the MRC */
+/*  and creates the core datasets for each of the primary categories of media and equipment                                    */
+/*******************************************************************************************************************************/
+
+/*this program is awesome!*/
+
+/*PART I*/
+/* lrecl must be larger than longest record or data may be lost or truncated */
+
+data alpha;
+	length 	callnum $ 150
+				copy $ 15
+				volume $ 15 
+				barcode $ 11 
+				intnote $ 1000
+				message $ 1000
+				pubnote $ 1000
+				created $ 25 
+				status $ 25 
+				total $ 25 
+				ytd $ 25 
+				lastyr $ 25 
+				location $ 25 
+				biblocale $ 25 
+				title $ 1000;
+/*	explore ways to automate next step. */
+		/* could there be a macro for chosing the most recent input file? probably */
+	infile "\\vmware-host\Shared Folders\input\25may2012.txt" 
+		dlm='09'x firstobs=2 missover dsd lrecl=1000; 
+	input callnum $ copy $ volume $ barcode $ intnote $ message $ pubnote $ created $ status $ total $ ytd $ lastyr $ location $ biblocale $ title $;
+run;
+
+/* prepare the call numbers for weeding */
+data beta;
+	set alpha;
+	callnum=upcase(trim(compress(compress(callnum,'-'))));
+run;
+
+/* process and format the dataset */
+data charlie (drop=created total ytd lastyr);
+	retain callnum volume copy barcode intnote message pubnote n_created status totalcirc yeartodate lastyearcirc location biblocale title;
+	set beta;
+
+	/* try to make the internal notes cooperate with tab-delimited output */
+	intnote=trim(compress(intnote,'-[]{}!@#$%^&*/\,.()=;:"'));
+	intnote=compress(intnote,"'");
+	intnote=substr(intnote,1,120);
+
+	/* make the created date numeric and make it human readable */
+	created=compress(compress(created,"-"));
+	n_created=input(created,mmddyy8.);
+	format n_created date9.;
+
+	/* make the status human readable */
+	status=compress(status);
+	if status='$' then status='lostpaid';
+		else if status='-' then status ='available';
+		else if status='m' then status ='missing';
+		else if status='n' then status ='billed';
+		else if status='o' then status ='noncirc';
+		else if status='r' then status ='repair';
+		else if status='t' then status ='in_transit';
+		else if status='w' then status ='withdrawn';
+		else if status='c' then status ='claims_lost';
+		else if status='d' then status ='declared_lost';
+
+	/* convert circulation counts to numeric */
+	yeartodate=input(ytd,best.);
+	lastyearcirc=input(lastyr,best.); 
+	totalcirc=input(total,best.);
+
+	/*	something screws up the title field when the txt file is produced */
+	/*	eliminating unneccesary characters appears to help */
+	title=trim(compress(title,'-[]{}!@#$%^&*/\,.()=;:"'));
+	title=compress(title,"'");
+	title=substr(title,1,30);
+
+run;
+
+
+/*PART II*/
+
+/********************************************************************************************************/
+/*                                     create tables for specific categories                            */
+/********************************************************************************************************/
+
+proc sql;
+	create table noncirc as
+		select * from charlie where lowcase(location) eq "uldal";
+
+	create table reserves as
+		select * from charlie where lowcase(location) eq "ulba";
+
+	create table equipment as
+		select * from charlie where lowcase(location) eq "uldc";
+
+	create table audiobooks as
+		select * from charlie where lowcase(location) eq "uldd";
+
+	create table dvd1 as
+		select * from charlie where lowcase(callnum) like "65dvd%";
+
+	create table vhs1 as
+		select * from charlie where lowcase(callnum) like "65v%";
+
+	create table bluray as
+		select * from charlie where substr(callnum,1,5)="65BLU";
+
+	create table cd as
+		select * from charlie where substr(callnum,1,4)="65CD";
+
+	create table kit as
+		select * from charlie where substr(callnum,1,5)="65KIT";
+
+	create table lang as
+		select * from charlie where substr(callnum,1,6)="65LANG";
+
+	create table room as
+		select * from charlie where substr(callnum,1,4)="ROOM";
+
+	create table station as
+		select * from charlie where substr(callnum,1,7)="STATION";
+
+	create table vcd as
+		select * from charlie where substr(callnum,1,5)="65VCD";
+
+	create table wii as
+		select * from charlie where substr(callnum,1,3)="WII";
+
+	create table y_personal as
+		select * from charlie where substr(callnum,1,1)="Y";
+
+	create table dvdrom as
+		select * from charlie where substr(callnum,1,8)="65DVDROM";
+
+	create table laserdisc as
+		select * from charlie where substr(callnum,1,4)="65LD";
+
+quit;
+
+/*get rid of dvdroms from the dvd dataset */
+data dvd1;
+	set dvd1;
+	if substr(callnum,1,8) eq "65DVDROM" then delete;
+run;
+
+/*get rid of vcds from the vhs dataset */
+data vhs1;
+	set vhs1;
+	if substr(callnum,1,5) eq "65VCD" then delete;
+run;
+
+/*create a dataset with everthing else - mostly audiobooks */
+data other;
+	set beta;
+	if substr(callnum,1,5)="65DVD" then delete;
+		else if substr(callnum,1,3)="65V" then delete;
+		else if substr(callnum,1,4)="65CD" then delete;
+		else if substr(callnum,1,5)="65BLU" then delete;
+		else if substr(callnum,1,5)="65KIT" then delete;
+		else if substr(callnum,1,6)="65LANG" then delete;
+		else if substr(callnum,1,4)="ROOM" then delete;
+		else if substr(callnum,1,7)="STATION" then delete;
+		else if substr(callnum,1,3)="WII" then delete;
+		else if substr(callnum,1,1)="Y" then delete;
+		else if substr(callnum,1,4)="65LD" then delete;
+		else if callnum="" then delete;
+run;
