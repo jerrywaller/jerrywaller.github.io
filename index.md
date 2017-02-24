@@ -43,8 +43,10 @@ June 2014-Present
 * Redesigned, with Emerging Technologies Librarian Vicki Siler, the Belk Library web site.
 
 ## Media Resources Center, University of North Carolina at Chapel Hill
-**Technical Support Analyst** 
-April 2008-June 2014 
+**Technical Support Analyst**
+
+April 2008-June 2014
+
 *Key Responsibilities:*
 * Website updates and maintenance.
 	* Restructured the Media Resources Center’s website to a more CSS dependent version.
@@ -65,8 +67,10 @@ April 2008-June 2014
 	* In-house production of labels and cases to make media shelf-ready.
 
 ## Duke University Press
-**Books Staff Specialist** 
-October 2007-April 2008 
+**Books Staff Specialist**
+
+October 2007-April 2008
+
 *Key Responsibilities:*
 * Assisted in the planning, coordination and administration of all Books customer service activities.
 * Assisted in planning methods to manage workloads.
@@ -74,24 +78,30 @@ October 2007-April 2008
 * Analyzed and refined workflow and processes.
 
 ## Pharmaceutical Product Development, Inc.
-**Associate Programmer Analyst** 
-May 2006-September 2007 
+**Associate Programmer Analyst**
+
+May 2006-September 2007
+
 *Primary Responsibilities:*
 * Performed complex, integrated computer programming and software development for clinical data applications, to include maintenance of existing systems and research/development for future enhancements.
 * Designed, coded, tested and documented SAS programs for dataset creation, data analysis, data conversion/transfer, graphic production, and project reporting.
 * Assisted in analyzing statistical programming needs in project proposals and guided project personnel in formulating appropriate data requirements; recommend optimum approach and developed SAS programs for approved projects.
 
 ## SAS Institute
-**User Interface Design Intern** 
-September 2005-December 2005 
+**User Interface Design Intern**
+
+September 2005-December 2005
+
 *Primary Responsibilities:*
 *  Conducted usability studies on prototype SAS interfaces.
 *  Learned SAS Enterprise Guide.
 *  Assisted in collection of contacts for User Interface project.
 
 ## R.B. House Undergraduate Library
-**Graduate Research Assistant** 
-September 2004-May 2006 
+**Graduate Research Assistant**
+
+September 2004-May 2006
+
 *Primary Responsibilities:*
 *  Identify, search for, and add full-text reserves articles from subscribed databases to the Docutek e-reserves system.
 *  Conduct instructional modules on document scanning and full-text linking for faculty Blackboard training sessions.
@@ -103,7 +113,8 @@ September 2004-May 2006
 ## Borders Books, Music, & Café (Borders Group Inc.)
  ~August 1996-August 2004~ 
 
-### **Manager** 3/01-8/04
+### **Manager** 
+	3/01-8/04
 *Primary Responsibilities:*
 *  Managing a large multi-format store with over $6 million in annual sales.
 *  Training new supervisors and staff on merchandising and inventory systems.
@@ -116,7 +127,8 @@ September 2004-May 2006
 *  Loss Prevention.
 *  Restructured the receiving/shelving/alphabetizing system for maximum efficiency.
 
-### **Assistant Manager (Music & Training)** 4/97-3/01
+### **Assistant Manager (Music & Training)** 
+	4/97-3/01
 *Primary Responsibilities:*
 *  Supervision of 40+ employees.
 *  Driving sales.
@@ -139,9 +151,9 @@ September 2004-May 2006
 *  Opened stores on time and under budget.
 
 **Acting General Manager**
+*Primary responsibilities same as Manager above.*
 * 5/00-7/00 (Cary, NC location) 
 * 8/01-10/01 (Greensboro, NC location) 
-*Primary responsibilities same as Manager above.*
 
 ### Waldenbooks (Borders Group Inc.)
 **Bookseller & Keyholder**  11/94-07/96
