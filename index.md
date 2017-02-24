@@ -114,7 +114,8 @@ September 2004-May 2006
  ~August 1996-August 2004~ 
 
 ### **Manager** 
-	3/01-8/04
+
+3/01-8/04
 *Primary Responsibilities:*
 *  Managing a large multi-format store with over $6 million in annual sales.
 *  Training new supervisors and staff on merchandising and inventory systems.
@@ -128,7 +129,8 @@ September 2004-May 2006
 *  Restructured the receiving/shelving/alphabetizing system for maximum efficiency.
 
 ### **Assistant Manager (Music & Training)** 
-	4/97-3/01
+
+4/97-3/01
 *Primary Responsibilities:*
 *  Supervision of 40+ employees.
 *  Driving sales.
