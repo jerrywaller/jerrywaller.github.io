@@ -145,7 +145,9 @@ September 2004-May 2006
 
 ### **Special Projects and Assignments**
 **Store Opening Project Manager (Retail Coordinator)** 
+
 8/99-12/99 and 8/00-12/00
+
 *Primary Responsibilities:*
 *  Lead teams of staff in the setting up of large multi-format stores.
 *  Trained new managers and store trainers on company systems and procedures.
@@ -155,12 +157,16 @@ September 2004-May 2006
 *  Opened stores on time and under budget.
 
 **Acting General Manager**
+
 *Primary responsibilities same as Manager above.*
 * 5/00-7/00 (Cary, NC location) 
 * 8/01-10/01 (Greensboro, NC location) 
 
 ### Waldenbooks (Borders Group Inc.)
-**Bookseller & Keyholder**  11/94-07/96
+**Bookseller & Keyholder**  
+
+11/94-07/96
+
 *Primary Responsibilities:*
 * Merchandising, ordering, receiving, and shelving. 
 * Assisted with all areas of bookstore, including maintenance of store, customer service, and cashiering.
