@@ -28,8 +28,12 @@ Concord University, Athens WV
 # CAREER EXPERIENCE
 
 ## Carol Grotnes Belk Library, Elon University
-**Systems Librarian** June 2014-Present
+**Systems Librarian** 
+
+June 2014-Present
+
 *Key Responsibilities and Achievements:*
+
 * Provide leadership, direction and technical expertise for the library’s technology infrastructure and systems to ensure access to library resources.
 * Serve as the library’s primary liaison with Instructional and Campus Technologies in communicating and resolving library technology needs and solutions.
 * Advise, consult and mentor library staff in their use of technology, provide regular and on-demand training, and seek to make library staff independent and proficient users of technology. Assist library staff with special technology projects.
@@ -39,7 +43,8 @@ Concord University, Athens WV
 * Redesigned, with Emerging Technologies Librarian Vicki Siler, the Belk Library web site.
 
 ## Media Resources Center, University of North Carolina at Chapel Hill
-**Technical Support Analyst** April 2008-June 2014 
+**Technical Support Analyst** 
+April 2008-June 2014 
 *Key Responsibilities:*
 * Website updates and maintenance.
 	* Restructured the Media Resources Center’s website to a more CSS dependent version.
@@ -60,7 +65,8 @@ Concord University, Athens WV
 	* In-house production of labels and cases to make media shelf-ready.
 
 ## Duke University Press
-**Books Staff Specialist** October 2007-April 2008 
+**Books Staff Specialist** 
+October 2007-April 2008 
 *Key Responsibilities:*
 * Assisted in the planning, coordination and administration of all Books customer service activities.
 * Assisted in planning methods to manage workloads.
@@ -68,21 +74,24 @@ Concord University, Athens WV
 * Analyzed and refined workflow and processes.
 
 ## Pharmaceutical Product Development, Inc.
-**Associate Programmer Analyst**, May 2006-September 2007 
+**Associate Programmer Analyst** 
+May 2006-September 2007 
 *Primary Responsibilities:*
 * Performed complex, integrated computer programming and software development for clinical data applications, to include maintenance of existing systems and research/development for future enhancements.
 * Designed, coded, tested and documented SAS programs for dataset creation, data analysis, data conversion/transfer, graphic production, and project reporting.
 * Assisted in analyzing statistical programming needs in project proposals and guided project personnel in formulating appropriate data requirements; recommend optimum approach and developed SAS programs for approved projects.
 
 ## SAS Institute
-**User Interface Design Intern**, September 2005-December 2005 
+**User Interface Design Intern** 
+September 2005-December 2005 
 *Primary Responsibilities:*
 *  Conducted usability studies on prototype SAS interfaces.
 *  Learned SAS Enterprise Guide.
 *  Assisted in collection of contacts for User Interface project.
 
 ## R.B. House Undergraduate Library
-**Graduate Research Assistant**, September 2004-May 2006 
+**Graduate Research Assistant** 
+September 2004-May 2006 
 *Primary Responsibilities:*
 *  Identify, search for, and add full-text reserves articles from subscribed databases to the Docutek e-reserves system.
 *  Conduct instructional modules on document scanning and full-text linking for faculty Blackboard training sessions.
@@ -112,8 +121,7 @@ Concord University, Athens WV
 *  Supervision of 40+ employees.
 *  Driving sales.
 *  Recruiting, interviewing, conducting reference checks, and hiring.
-*  Orientation and training of new staff, as well as training of existing staff on new systems,
-technologies, policies, and procedures.
+*  Orientation and training of new staff, as well as training of existing staff on new systems, technologies, policies, and procedures.
 *  Designed new training documents and refined store's systems for training and follow up.
 *  Created and implemented system for cross-training staff in all three areas of store in order to triple store resources.
 *  Sales floor management, loss prevention, and cost control.
