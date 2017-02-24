@@ -1,0 +1,8 @@
+title: jerrywaller.github.io
+description: All the fun stuff is here.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
