@@ -111,7 +111,7 @@ September 2004-May 2006
 *  Collection development.
 
 ## Borders Books, Music, & Café (Borders Group Inc.)
- ~August 1996-August 2004~ 
+ August 1996-August 2004 
 
 ### **Manager** 
 
