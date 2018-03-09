@@ -1,11 +1,9 @@
 # Jerry Waller
 
 # EDUCATION
-### Master of Science in Information Science, 2006.
+### Master of Science in Information Science
 University of North Carolina at Chapel Hill, Chapel Hill, NC.
 
-### Bachelor of Arts in English, minor in Philosophy, 1994
-Concord University, Athens WV
 
 # COMPUTING SKILLS AND EXPERIENCE
 * SAS 9, including completion of SAS Programming I, II, and macro courses at SAS Institute.
@@ -66,21 +64,9 @@ April 2008-June 2014
 	* Gathered metadata, often in multiple languages, in preparation for copy or original cataloging.
 	* In-house production of labels and cases to make media shelf-ready.
 
-## Duke University Press
-**Books Staff Specialist**
-
-October 2007-April 2008
-
-*Key Responsibilities:*
-* Assisted in the planning, coordination and administration of all Books customer service activities.
-* Assisted in planning methods to manage workloads.
-* Updated Oracle database.
-* Analyzed and refined workflow and processes.
 
 ## Pharmaceutical Product Development, Inc.
 **Associate Programmer Analyst**
-
-May 2006-September 2007
 
 *Primary Responsibilities:*
 * Performed complex, integrated computer programming and software development for clinical data applications, to include maintenance of existing systems and research/development for future enhancements.
@@ -90,8 +76,6 @@ May 2006-September 2007
 ## SAS Institute
 **User Interface Design Intern**
 
-September 2005-December 2005
-
 *Primary Responsibilities:*
 *  Conducted usability studies on prototype SAS interfaces.
 *  Learned SAS Enterprise Guide.
@@ -100,8 +84,6 @@ September 2005-December 2005
 ## R.B. House Undergraduate Library
 **Graduate Research Assistant**
 
-September 2004-May 2006
-
 *Primary Responsibilities:*
 *  Identify, search for, and add full-text reserves articles from subscribed databases to the Docutek e-reserves system.
 *  Conduct instructional modules on document scanning and full-text linking for faculty Blackboard training sessions.
@@ -109,65 +91,3 @@ September 2004-May 2006
 *  Assisted in the creation of the LinkGuide, a pathfinder that details the steps needed to create permanent links to articles in subscribed electronic databases.
 *  Supervise the library’s collaborative computer lab, including assisting users with software and scanner issues.
 *  Collection development.
-
-## Borders Books, Music, & Café (Borders Group Inc.)
- August 1996-August 2004 
-
-### **Manager** 
-
-3/01-8/04
-
-*Primary Responsibilities:*
-*  Managing a large multi-format store with over $6 million in annual sales.
-*  Training new supervisors and staff on merchandising and inventory systems.
-*  Integrating new technologies into existing systems.
-*  Scheduling 40+ employees and managers.
-*  Recruiting, interviewing, hiring, and terminating.
-*  Payroll budget administration.
-*  Maintaining corporate audit compliance.
-*  Physical plant maintenance.
-*  Loss Prevention.
-*  Restructured the receiving/shelving/alphabetizing system for maximum efficiency.
-
-### **Assistant Manager (Music & Training)** 
-
-4/97-3/01
-
-*Primary Responsibilities:*
-*  Supervision of 40+ employees.
-*  Driving sales.
-*  Recruiting, interviewing, conducting reference checks, and hiring.
-*  Orientation and training of new staff, as well as training of existing staff on new systems, technologies, policies, and procedures.
-*  Designed new training documents and refined store's systems for training and follow up.
-*  Created and implemented system for cross-training staff in all three areas of store in order to triple store resources.
-*  Sales floor management, loss prevention, and cost control.
-*  Financial reporting, budget management, office support and cash reconciliation.
-
-### **Special Projects and Assignments**
-**Store Opening Project Manager (Retail Coordinator)** 
-
-8/99-12/99 and 8/00-12/00
-
-*Primary Responsibilities:*
-*  Lead teams of staff in the setting up of large multi-format stores.
-*  Trained new managers and store trainers on company systems and procedures.
-*  Liaised  between Corporate Offices, store management, general contractor & subcontractors.
-*  Ensured quality in store layout, fixtures, and physical plant operation.
-*  Acquisition of all necessary permits and certification.
-*  Opened stores on time and under budget.
-
-**Acting General Manager**
-
-*Primary responsibilities same as Manager above.*
-* 5/00-7/00 (Cary, NC location) 
-* 8/01-10/01 (Greensboro, NC location) 
-
-### Waldenbooks (Borders Group Inc.)
-**Bookseller & Keyholder**  
-
-11/94-07/96
-
-*Primary Responsibilities:*
-* Merchandising, ordering, receiving, and shelving. 
-* Assisted with all areas of bookstore, including maintenance of store, customer service, and cashiering.
-* Opening & closing of store, including cash reconciliation and safe access.
